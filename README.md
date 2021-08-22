@@ -7,7 +7,6 @@ For this week's project, we will be looking at Big Data and Cloud Services. Big 
 The purpose of this week's project is help businesses optimize their marketing efforts at BigMarket. The project will be to analyze Amazon reviews written by members of the paid Amazon Vine program. Amazon Vine members are delivered products and are required to publish a review. We will be using PySpark to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. We will then be using PySpark to analyze our data to determine if there is any bias toward favorable Vine member reviews. 
 
 ## Results
-
 In order for us to determine if there was a bias of Vine Reviews, we created a dataframe from our Amazon review data that had 6 columns:
 1. review_id: The unique ID of the review.
 2. star_rating: The 1-5 star rating of the review.
@@ -42,11 +41,9 @@ Here are the results of total number of reviews, the number of 5-star reviews, a
 ![unpaid_reviews_percentage](/Resources/unpaid_reviews_percentage.PNG)
 
 ## Summary
-In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+After reviewing the results comparing the Vine vs. Non-Vine reviews, there is not a bias for reviews in the Vine program. As seen in the images above, 42% of Vine members reviews were 5-star and 47% of Non-Vine reviews were 5-star. The number of Vine reviews total in comparison to Non-Vine reviews is significantly less though. 
 
-After reviewing the results comparing the Vine vs. Non-Vine reviews, there is not a bias for reviews in the Vine program. As seen in the images above, 42% of Vine members reviews were 5-star and 47% of Non-Vine reviews were 5-star. The number of Vine reviews total in comparision to Non-Vine reviews is significantly less though. 
-
-In order to make sure the Non-Vine customers actually purchased the item from Amazon or that it wasn't gifted, we can also filter based on the verified_purchase column. After rerunning the calculations on this new dataframe, 48% of Non-Vine members reviews were 5-star and verified that they purchased the item. 
+In order to confirm the Non-Vine customers actually purchased the item from Amazon or that it wasn't gifted, we can also filter based on the verified_purchase column. After rerunning the calculations on this new dataframe, 48% of Non-Vine members reviews were 5-star and verified that they purchased the item.
 
 ![unpaid_purchase_reviews](/Resources/unpaid_purchase_reviews.PNG)
 
