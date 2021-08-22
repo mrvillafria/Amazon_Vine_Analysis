@@ -16,28 +16,38 @@ In order for us to determine if there was a bias of Vine Reviews, we created a d
 5. vine: Review was written as part of the Vine program.
 6. verified_purchase: The review is on a verified purchase.
 
-We filtered the dataframe to retrieve rows where the total_count was greater or equal to 20 and also filtered to show reviews that are more likely to be helpful. We created two more dataframes based on if the review was a Vine review (paid) or non-Vine review (unpaid).
+We filtered the dataframe to retrieve rows where the total_count was greater or equal to 20 and also filtered to show reviews that are more likely to be helpful. We created two more dataframes based on if the review was a Vine review (paid) or non-Vine review (unpaid). 
 
-#### Number of Reviews
+Here are the results of total number of reviews, the number of 5-star reviews, and percentage of 5-star reviews for the two types of review (paid vs. unpaid)
+
+#### Total Number of Reviews
 ##### Vine Reviews
 ![paid_reviews](/Resources/paid_reviews.PNG)
 
-##### Non-View Reviews
+##### Non-Vine Reviews
 ![unpaid_reviews](/Resources/unpaid_reviews.PNG)
 
-#### Number of 5 Star Reviews
+#### Number of 5-Star Reviews
 ##### Vine 5 Star Reviews
 ![paid_five_star_reviews](/Resources/paid_five_star_reviews.PNG)
 
-##### Non-View 5 Star Reviews
+##### Non-Vine 5-Star Reviews
 ![unpaid_five_star_reviews](/Resources/unpaid_five_star_reviews.PNG)
 
-#### Percentage of 5 Star Reviews
-##### Vine 5 Star Review Percentage
+#### Percentage of 5-Star Reviews
+##### Vine 5-Star Review Percentage
 ![paid_reviews_percentage](/Resources/paid_reviews_percentage.PNG)
 
-##### Non-View 5 Star Review Percentage
+##### Non-Vine 5-Star Review Percentage
 ![unpaid_reviews_percentage](/Resources/unpaid_reviews_percentage.PNG)
 
 ## Summary
 In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+
+After reviewing the results comparing the Vine vs. Non-Vine reviews, there is not a bias for reviews in the Vine program. As seen in the images above, 42% of Vine members reviews were 5-star and 47% of Non-Vine reviews were 5-star. The number of Vine reviews total in comparision to Non-Vine reviews is significantly less though. 
+
+In order to make sure the Non-Vine customers actually purchased the item from Amazon or that it wasn't gifted, we can also filter based on the verified_purchase column. After rerunning the calculations on this new dataframe, 48% of Non-Vine members reviews were 5-star and verified that they purchased the item. 
+
+![unpaid_purchase_reviews](/Resources/unpaid_purchase_reviews.PNG)
+
+![unpaid_purchase_calculations](/Resources/unpaid_purchase_calculations.PNG)
